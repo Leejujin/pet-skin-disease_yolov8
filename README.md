@@ -1,4 +1,5 @@
 # pet-skin-disease_yolov8
+반려동물 피부 질환데이터를 가지고 피부질환 웹 서비스를 구축하기 위해 필요한 AI모델 구축
 ### 전처리된 데이터 다운로드 링크(실행 코드 파일에도 다운로드 url 있습니다.)
 [전처리 데이터 구글 드라이브 다운로드 링크](https://docs.google.com/uc?export=download&id=1KOkWMPHNrUHMth3aRK0SP9fl_WSCfF0d)
 ### 관련 패키지 설치
@@ -12,7 +13,7 @@ pip install ultralytics  #yolov8 관련 패키지
 pip install gdown  # 대용량 파일 다운로드 관련 패키지
 ```
 ## yolov8
-
+![image](https://github.com/Leejujin/pet-skin-disease_yolov8/assets/38245868/b40fa40b-8653-423e-bf93-282765ee4510)
 YOLO의 최신 버전인 YOLOv8는 이전 버전의 성공을 기반으로 새로운 기능과 개선 사항을 도입하여 성능과 유연성을 더욱 향상시켰다.
 YOLOv8은 도큐먼트화 및 모듈화가 친화적으로 잘 되어 있어 사용에 용이하다.
 
