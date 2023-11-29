@@ -1,5 +1,6 @@
 # pet-skin-disease_yolov8
 반려동물 피부 질환데이터를 가지고 피부질환 웹 서비스를 구축하기 위해 필요한 AI모델 구축
+![스크린샷 2023-11-29 165434](https://github.com/Leejujin/pet-skin-disease_yolov8/assets/38245868/8da1ebaf-0480-4d1c-b4c3-313a153c0691)
 ### 전처리된 데이터 다운로드 링크(실행 코드 파일에도 다운로드 url 있습니다.)
 [전처리 데이터 구글 드라이브 다운로드 링크](https://docs.google.com/uc?export=download&id=1KOkWMPHNrUHMth3aRK0SP9fl_WSCfF0d)
 ### 관련 패키지 설치
