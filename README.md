@@ -28,6 +28,8 @@ YOLOv8은 도큐먼트화 및 모듈화가 친화적으로 잘 되어 있어 사
 
 ![스크린샷 2023-11-29 154009](https://github.com/Leejujin/pet-skin-disease_yolov8/assets/38245868/c9558ff9-7a0d-42c0-a318-98e4ad6b2f8d)
 
+A7_무증상 같은 경우 각각의 질병의 무증상 이미지이므로 각각의 질병 무증상 500장씩 총3000장을 데이터로 사용했습니다.
+
 ### 코드 설명
   * 압축 해제
     - 다운로드 받은 파일을 압축해제하는 코드가 들어있습니다. 압축을 해제할 경로를 해당 환경에 맞게 설정해주세요
@@ -51,13 +53,13 @@ YOLOv8은 도큐먼트화 및 모듈화가 친화적으로 잘 되어 있어 사
       print(Custom_yaml)
       ```
   * yolov8 모델 로드
-    - 사전 학습된 모델 yolov8n.pt 을 로드합니다.
+    - 사전 학습된 모델 yolov8n.pt 을 로드합니다.(yolov8s.pt도 사용가능 해당 환경이 좀더 무거운 모델을 써도 된다면 사용권장)
     - ```python
       from ultralytics import YOLO
       model = YOLO('yolov8n.pt')
       ```
   * 커스텀 데이터 학습
-    - yaml파일의 경로는 해당 환경에 맞게 수정해야합니다.
+    - yaml파일의 경로는 해당 환경에 맞게 수정해야합니다. (버전이 다른 s,m,l,x 같은 경우 model = 'yolov8s.pt' 와 같이 지정해 주어야 한다.)
     - ```python
       model.train(data = r'C:\pyprj\custom.yaml', epochs=150, patience=50, batch=32, imgsz=416)
       ```
