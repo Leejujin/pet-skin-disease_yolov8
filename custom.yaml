@@ -1,0 +1,12 @@
+names:
+- "A1_\uAD6C\uC9C4_\uD50C\uB77C\uD06C"
+- "A2_\uBE44\uB4EC_\uAC01\uC9C8_\uC0C1\uD53C\uC131\uC794\uACE0\uB9AC"
+- "A3_\uD0DC\uC120\uD654_\uACFC\uB2E4\uC0C9\uC18C\uCE68\uCC29"
+- "A4_\uB18D\uD3EC_\uC5EC\uB4DC\uB984"
+- "A5_\uBBF8\uB780_\uADA4\uC591"
+- "A6_\uACB0\uC808_\uC885\uAD34"
+- "A7_\uBB34\uC99D\uC0C1"
+nc: 7
+test: C:\pyprj\SET_data\test
+train: C:\pyprj\SET_data\train
+val: C:\pyprj\SET_data\val
