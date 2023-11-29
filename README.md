@@ -12,13 +12,18 @@ pip install ultralytics  #yolov8 관련 패키지
 pip install gdown  # 대용량 파일 다운로드 관련 패키지
 ```
 ## yolov8
+
 YOLO의 최신 버전인 YOLOv8는 이전 버전의 성공을 기반으로 새로운 기능과 개선 사항을 도입하여 성능과 유연성을 더욱 향상시켰다.
 YOLOv8은 도큐먼트화 및 모듈화가 친화적으로 잘 되어 있어 사용에 용이하다.
 
 ### 커스텀 데이터
 원천데이터 : AI hub [반려동물 피부 질환 데이터](https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=&topMenu=&aihubDataSe=data&dataSetSn=561)
+
 데이터의 전처리는 코랩 환경에서 데이터 처리 했습니다.
+
 이미지 파일의 개수는 다음과 같습니다.
+
+![스크린샷 2023-11-29 154009](https://github.com/Leejujin/pet-skin-disease_yolov8/assets/38245868/c9558ff9-7a0d-42c0-a318-98e4ad6b2f8d)
 
 ### 코드 설명
   * 압축 해제
