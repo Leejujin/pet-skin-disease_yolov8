@@ -67,6 +67,7 @@ A7_무증상 같은 경우 각각의 질병의 무증상 이미지이므로 각�
     - // patience => 관촬될만한 Training 진전이 없으면 30번 보다가 Training 중단
     - // batch => 일괄입력 data 개수
     - // imgsz => input image 크기
+    - // optimizer => 옵티마이저 설정 (SGD, Adam, Adamax, AdamW, NAdam, RAdam, RMSProp, auto)
 
   * 테스트 이미지 예측
     - test 경로는 해당 컴퓨터 환경에 맞게 수정해야합니다.(압축을 푸셨던 디렉토리 경로로 설정해주세요)
