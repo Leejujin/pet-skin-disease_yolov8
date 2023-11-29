@@ -72,4 +72,4 @@ YOLOv8은 도큐먼트화 및 모듈화가 친화적으로 잘 되어 있어 사
       results = model.predict(source =r'C:\pyprj\SET_data\test', save=True)
       ```
 #### 예측되어 나오는 원하는 결과물
-
+![IMG_D_A2_603230](https://github.com/Leejujin/pet-skin-disease_yolov8/assets/38245868/a865791a-2f82-40cb-a849-4556f505c829)
