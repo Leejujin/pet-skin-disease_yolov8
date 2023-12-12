@@ -3,7 +3,8 @@
 반려동물 피부 질환데이터를 가지고 피부질환 웹 서비스를 구축하기 위해 필요한 AI모델 구축
 ![스크린샷 2023-11-29 165434](https://github.com/Leejujin/pet-skin-disease_yolov8/assets/38245868/d52ef93f-a72e-477a-aef3-63e16e0831e3)
 ### 전처리된 데이터 다운로드 링크(실행 코드에도 다운로드 url 있습니다.) => 피부 질환 데이터
-[전처리 데이터 구글 드라이브 다운로드 링크](https://docs.google.com/uc?export=download&id=1KOkWMPHNrUHMth3aRK0SP9fl_WSCfF0d)
+[전처리 데이터 구글 드라이브 다운로드 링크(피부 질환 detect)](https://docs.google.com/uc?export=download&id=1KOkWMPHNrUHMth3aRK0SP9fl_WSCfF0d)
+[전처리 데이터 구글 드라이브 다운로드 링크(피부 질환 Segmentation)](https://docs.google.com/uc?export=download&id=1k7vw672QijpuTuG2NN6g7OWF8_6E4_bg)
 ### 관련 패키지 설치
 (cuda버전 필수 확인 , 해당 버전과 맞는 torch,torchvision 버전 설치)
 ```python
@@ -54,12 +55,14 @@ A7_무증상 같은 경우 각각의 질병의 무증상 이미지이므로 각�
       ```
   * yolov8 모델 로드
     - 사전 학습된 모델 yolov8n.pt 을 로드합니다.(yolov8s.pt도 사용가능 해당 환경이 좀더 무거운 모델을 써도 된다면 사용권장)
+    - Segmentation의 경우 yolov8n-seg.pt 을 로드합니다.
     - ```python
       from ultralytics import YOLO
       model = YOLO('yolov8n.pt')
       ```
   * 커스텀 데이터 학습
     - yaml파일의 경로는 해당 환경에 맞게 수정해야합니다. (버전이 다른 s,m,l,x 같은 경우 model = 'yolov8s.pt' 와 같이 지정해 주어야 한다.)
+    - Segmentation의 경우는 task='segment' , model='yolov8n-seg.pt', imgsz=640 로 설정 (모델 로드를 yolov8n-seg.pt로 했다면 task,model 생략가능) 
     - ```python
       model.train(data = r'C:\pyprj\custom.yaml', epochs=150, patience=50, batch=32, imgsz=416)
       ```
