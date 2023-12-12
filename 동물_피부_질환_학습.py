@@ -12,6 +12,9 @@ Original file is located at
 
 #!gdown https://docs.google.com/uc?export=download&id=1KOkWMPHNrUHMth3aRK0SP9fl_WSCfF0d
 
+#세그먼트 학습용 전처리 데이터
+#!gdown https://docs.google.com/uc?export=download&id=1k7vw672QijpuTuG2NN6g7OWF8_6E4_bg
+
 
 import zipfile
 import os
@@ -70,14 +73,14 @@ import ultralytics
 ultralytics.checks()
 
 from ultralytics import YOLO
-model = YOLO('yolov8n.pt')
+model = YOLO('yolov8n-seg.pt')
 
 print(type(model.names), len(model.names))
 print(model.names)
 
 os.environ['CUDA_LAUNCH_BLOCKING'] = "1"
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
-model.train(data = r'C:\pyprj\custom.yaml', epochs=150, patience=50, batch=32, imgsz=416)
+model.train(data = r'C:\pyprj\custom.yaml', epochs=160, patience=50, batch=256, imgsz=640)
 
 print(type(model.names), len(model.names))
 print(model.names)
